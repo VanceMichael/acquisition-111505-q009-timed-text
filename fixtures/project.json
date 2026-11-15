@@ -1,0 +1,9 @@
+{
+  "name": "展陈字幕的嵌套计时与分区文字采集",
+  "probe": "/subtitles",
+  "identityFields": [
+    "document",
+    "region",
+    "begin"
+  ]
+}
