@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="utf-8"?><tt xmlns="http://www.w3.org/ns/ttml" xmlns:ttp="http://www.w3.org/ns/ttml#parameter" ttp:tickRate="100"><head><layout><region xml:id="left"/></layout></head><body><div timeContainer="par"><p begin="10f" dur="20f" region="left">缺帧率的帧表达式</p><p begin="50t" region="left">tick 仍可确定</p></div></body></tt>

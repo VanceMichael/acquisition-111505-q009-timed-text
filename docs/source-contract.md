@@ -2,7 +2,7 @@
 
 ## 资料边界
 
-/subtitles 返回交付清单及 XML href。支持 TTML 子集：tt/head/styling/layout/body/div/p/span/br，xml:id、region、style、begin、end、dur、timeContainer=par|seq；根参数 frameRate、frameRateMultiplier、tickRate。表达式支持 h:m:s、秒 s、帧 f、tick t。样式含 display 和 visibility，并按引用/继承生效。无外部实体解析；外置样式仅清单授权 href 可取。
+/subtitles 返回交付清单及 XML href。清单条目形如 `{ id, revision, href, styles? }`，`styles` 为可选的授权外置样式数组（每项含 href）；收件端只抓取清单内 href 与授权样式 href，解析后跨源的链接拒绝访问。支持 TTML 子集：tt/head/styling/layout/body/div/p/span/br，xml:id、region、style、begin、end、dur、timeContainer=par|seq；根参数 frameRate、frameRateMultiplier、tickRate。表达式支持 h:m:s、秒 s、帧 f、tick t。样式含 display 和 visibility，并按引用/继承生效。无外部实体解析；外置样式仅清单授权 href 可取，取不到时收件端保留问题而不臆造可见性。
 
 ## 本地服务
 

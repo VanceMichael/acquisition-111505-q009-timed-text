@@ -16,6 +16,6 @@ test('字幕保留时基倍率、顺序容器及隐藏跨度', async context => 
   assert.equal(response.headers.get('content-type'), 'application/ttml+xml'); assert.match(xml, /1000 1001/); assert.match(xml, /timeContainer="seq"/); assert.match(xml, /内部备注/); assert.match(xml, /region="right"/);
 });
 test('时间冲突以真实原文交付而非预先修正', async context => {
-  const { base, control } = await withSource(context); await control({ conflict: true });
+  const { base, control } = await withSource(context); await control({ mode: 'conflict' });
   assert.match(await (await fetch(base + '/text/intro.xml')).text(), /begin="4s" end="2s"/);
 });
